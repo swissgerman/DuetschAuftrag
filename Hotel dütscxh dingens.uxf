@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1300</x>
+      <y>360</y>
+      <w>210</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>benutzer
+--
+UserID: int(11)
+Benutzer: varchar(20)
+Passwort: varchar(20)
+GanzerName: varchar(50)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>580</x>
+      <y>320</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>buchung
+--
+BuchungsID: int(11)
+PersIDFS: int(11)
+Ankunft: datetime
+Abreise: datetime
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>920</x>
+      <y>490</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Kunden
+
+fg=red
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1300</x>
+      <y>140</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>leistung
+--
+LeistungID: int(11)
+Beschriebung: varchar(70)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>940</x>
+      <y>260</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>position
+--
+PositionID: int(11)
+BuchungIDFS: int(11)
+LeistungIDFS: int(11)
+BenutzerIDFS: int(11)
+Anzahl: int(11)
+Fixpreis: decimal(9,2)
+/Rabatt: decimal(4,2)/
+Datum: datetime </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>340</y>
+      <w>180</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=mc
+m2=1</panel_attributes>
+    <additional_attributes>30;30;160;180</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>750</x>
+      <y>280</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=mc
+</panel_attributes>
+    <additional_attributes>30;40;190;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1120</x>
+      <y>140</y>
+      <w>200</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=mc
+m2=1
+</panel_attributes>
+    <additional_attributes>30;180;180;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1120</x>
+      <y>310</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=mc
+m2=1
+</panel_attributes>
+    <additional_attributes>30;30;180;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>920</x>
+      <y>490</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes> 
+--
+PersID: int(11)
+Vorname: varchar(30)
+Name: varchar(30)
+Strasse: varchar(30)
+Ort: varchar(30)
+Anrede: varchar(10)
+Privattelefon: varchar(20)
+Eingabedatum: datetime
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1300</x>
+      <y>140</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes> 
+--
+ 
+ 
+Vorschlagspreis: decimal(9, 2)
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>580</x>
+      <y>320</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes> 
+--
+ 
+ 
+ 
+
+
+
+    
+abgeschlossen: boolean
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>290</x>
+      <y>390</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>zahlung
+--
+ZahlungID: int(11)
+buchungIDFS: int(11)
+betrag: decimal(9,2)
+zahldatum: datetime
+
+fg=red
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>470</x>
+      <y>320</y>
+      <w>130</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=mc
+m2=1
+fg=red</panel_attributes>
+    <additional_attributes>30;120;110;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>580</x>
+      <y>540</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes> 
+--
+roter text:
+wird hinzugefügt oder geändert
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>580</x>
+      <y>540</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Legende
+--
+ 
+  
+/Kursiver Text: löschungen/
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>390</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Mahnung
+--
+MahnungID: int(11)
+rechnungIDFS: int(11)
+mahndatum: datetime
+fg=red
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>180</x>
+      <y>390</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=mc
+fg=red</panel_attributes>
+    <additional_attributes>110;30;30;50</additional_attributes>
+  </element>
+</diagram>
