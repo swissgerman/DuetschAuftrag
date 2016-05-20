@@ -1167,7 +1167,7 @@ CREATE TABLE IF NOT EXISTS `position` (
   `UserID` int(11) DEFAULT NULL,
   `Anzahl` int(11) DEFAULT NULL,
   `Preis` decimal(9,2) DEFAULT NULL,
-  `Rabatt` decimal(4,2) DEFAULT NULL,
+  `Preis` decimal(9,2) DEFAULT NULL,
   `Datum` datetime DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=56387 DEFAULT CHARSET=utf8;
 
