@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23.05.2016 16:48:12 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ch.bbw.siegrist.hotel.persitance.entity.Mahnung" table="mahnung" catalog="hoteldb" optimistic-lock="version">
+        <id name="mahnungId" type="int">
+            <column name="MahnungID" />
+            <generator class="assigned" />
+        </id>
+        <property name="mahndatum" type="timestamp">
+            <column name="Mahndatum" length="19" not-null="true" />
+        </property>
+        <property name="rechnungIdfs" type="int">
+            <column name="RechnungIDFS" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
