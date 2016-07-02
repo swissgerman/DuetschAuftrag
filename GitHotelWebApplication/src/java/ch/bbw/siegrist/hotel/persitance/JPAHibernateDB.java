@@ -11,6 +11,10 @@ import ch.bbw.siegrist.hotel.persitance.entity.Buchung;
 import ch.bbw.siegrist.hotel.persitance.entity.Leistung;
 import ch.bbw.siegrist.hotel.persitance.entity.Position;
 import ch.bbw.siegrist.hotel.persitance.interfaces.IDB;
+import java.util.ArrayList;
+import java.util.List;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -21,6 +25,8 @@ import org.hibernate.cfg.Configuration;
  *
  * @author 5ia13nosiegrist
  */
+@ManagedBean
+@SessionScoped
 public class JPAHibernateDB implements IDB{
     private Session session;
     public JPAHibernateDB(){
@@ -69,6 +75,17 @@ public class JPAHibernateDB implements IDB{
     @Override
     public Kunden getKunde(int id) {
         return (Kunden)session.get(Kunden.class, id);
+    }
+    
+    @Override
+    public ArrayList<Kunden> getKunden() {
+        ArrayList<Kunden> ret = new ArrayList<>();
+        /*List l = session.createCriteria(Benutzer.class).list();
+        l.stream().forEach((k) -> {
+            ret.add((Kunden)k);
+        });*/
+        ret.add(getKunde(1));
+        return ret;
     }
 
     @Override
