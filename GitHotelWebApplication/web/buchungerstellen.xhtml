@@ -1,0 +1,18 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/template/layout.xhtml">
+
+
+	<ui:define name="pageTitle">
+		<h:outputLabel value="Test"/>
+	</ui:define>
+	<ui:define name="content">
+            <h:selectOneMenu value="Kunde wählen">
+                <ui:repeat var="o" value="#{jPAHibernateDB.getKunden()}" varStatus="status">
+                    <f:selectItem itemValue="#{o.id}" itemLabel="#{o.vorname} #{o.name}" />
+                </ui:repeat>
+            </h:selectOneMenu>      
+	</ui:define>
+
+</ui:composition>
