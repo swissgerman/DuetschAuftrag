@@ -6,6 +6,8 @@
 package ch.bbw.siegrist.hotel.persitance.interfaces;
 
 import ch.bbw.siegrist.hotel.persitance.entity.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -22,4 +24,5 @@ public interface IDB {
     public Leistung getLeistung(int id);
     public Benutzer getBenutzer(int id);
     public Buchung getBuchung(int id);
+    public List<Kunden> getKunden();
 }

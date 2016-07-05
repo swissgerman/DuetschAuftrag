@@ -16,12 +16,18 @@
 			</div>
 			<div id="content" class="content">
                             <div id="panelLeft1Content" class="navigation">
-                                <div class="navigationPanel used">
-                                    <h:outputLabel value="Home"/>
-                                </div>
-                                <div class="navigationPanel">
-                                    <h:outputLabel value="Second"/>
-                                </div>
+                                <h:form>
+                                    <h:commandLink action="#{navigationBean.setPage('index')}">
+                                        <div class="navigationPanel used">
+                                            <h:outputLabel value="Home"/>
+                                        </div>
+                                    </h:commandLink>
+                                    <h:commandLink action="#{navigationBean.setPage('buchungerstellen')}">
+                                        <div class="navigationPanel">
+                                            <h:outputLabel value="Buchung Erstellen"/>
+                                        </div>
+                                    </h:commandLink>
+                                </h:form>
                             </div>			
                             <div id="main" class="main">
                                    <ui:insert name="content" rendered="#{loginBean.isUserLoggedIn()}"/>
