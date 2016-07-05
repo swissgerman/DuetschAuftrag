@@ -29,7 +29,7 @@ public class HotelDütschDBConn {
         if(!db.createKunde(new Kunden("Noah", "Siegrist", "Edelweissstrasse", "Dietikon", "Herr", "0795354514", null, null)))
             System.err.println("Fatal error!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");    
         System.out.println("All Good:D");
-        Buchung b = new Buchung(db.getKunde(1), new Date(1, 1, 2015), new Date(1, 2, 2016), true, null);
+        Buchung b = new Buchung(0, db.getKunde(1), new Date(1, 1, 2015), new Date(1, 2, 2016), true, null);
         db.createBuchung(b);
         System.out.println("gaga" + b.getBuchungId());
         Position p1 = new Position(db.getBenutzer(1), b, db.getLeistung(1), 2, BigDecimal.valueOf(20.5), new Date(2, 1, 2016));

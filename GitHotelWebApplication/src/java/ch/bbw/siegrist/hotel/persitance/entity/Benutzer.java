@@ -1,5 +1,5 @@
 package ch.bbw.siegrist.hotel.persitance.entity;
-// Generated 23.05.2016 16:48:12 by Hibernate Tools 4.3.1
+// Generated 05.07.2016 18:51:09 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;

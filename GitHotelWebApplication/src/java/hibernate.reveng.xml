@@ -2,11 +2,11 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="hoteldb"/>
-  <table-filter match-name="benutzer"/>
   <table-filter match-name="buchung"/>
-  <table-filter match-name="kunden"/>
-  <table-filter match-name="zahlung"/>
-  <table-filter match-name="leistung"/>
-  <table-filter match-name="mahnung"/>
   <table-filter match-name="position"/>
+  <table-filter match-name="leistung"/>
+  <table-filter match-name="zahlung"/>
+  <table-filter match-name="mahnung"/>
+  <table-filter match-name="benutzer"/>
+  <table-filter match-name="kunden"/>
 </hibernate-reverse-engineering>

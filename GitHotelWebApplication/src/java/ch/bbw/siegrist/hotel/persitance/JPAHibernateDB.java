@@ -80,11 +80,10 @@ public class JPAHibernateDB implements IDB{
     @Override
     public ArrayList<Kunden> getKunden() {
         ArrayList<Kunden> ret = new ArrayList<>();
-        /*List l = session.createCriteria(Benutzer.class).list();
+        List l = session.createCriteria(Kunden.class).list();
         l.stream().forEach((k) -> {
             ret.add((Kunden)k);
-        });*/
-        ret.add(getKunde(1));
+        });
         return ret;
     }
 
