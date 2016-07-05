@@ -9,10 +9,9 @@
 	</ui:define>
 	<ui:define name="content">
             <h:selectOneMenu value="Kunde wählen">
-                <ui:repeat var="o" value="#{jPAHibernateDB.getKunden()}" varStatus="status">
-                    <f:selectItem itemValue="#{o.id}" itemLabel="#{o.vorname} #{o.name}" />
-                </ui:repeat>
-            </h:selectOneMenu>      
+                    <f:selectItems value="#{jPAHibernateDB.getKunden()}" var="o" itemValue="#{o}" itemLabel="#{o.name} #{o.vorname}"/>
+            </h:selectOneMenu>    
+            
 	</ui:define>
 
 </ui:composition>
