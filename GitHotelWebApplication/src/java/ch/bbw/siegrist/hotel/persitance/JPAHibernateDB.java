@@ -102,4 +102,14 @@ public class JPAHibernateDB implements IDB{
         return (Buchung)session.get(Buchung.class, id);
     }
     
+    @Override
+    public ArrayList<Buchung> getBuchungen() {
+        ArrayList<Buchung> ret = new ArrayList<>();
+        List l = session.createCriteria(Buchung.class).list();
+        l.stream().forEach((k) -> {
+            ret.add((Buchung)k);
+        });
+        return ret;
+    }
+    
 }

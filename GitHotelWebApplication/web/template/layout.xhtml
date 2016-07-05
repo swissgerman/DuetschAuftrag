@@ -18,13 +18,18 @@
                             <div id="panelLeft1Content" class="navigation">
                                 <h:form>
                                     <h:commandLink action="#{navigationBean.setPage('index')}">
-                                        <div class="navigationPanel used">
+                                        <div class="navigationPanel #{navigationBean.isPageUsed('index')}">
                                             <h:outputLabel value="Home"/>
                                         </div>
                                     </h:commandLink>
                                     <h:commandLink action="#{navigationBean.setPage('buchungerstellen')}">
-                                        <div class="navigationPanel">
+                                        <div class="navigationPanel #{navigationBean.isPageUsed('buchungerstellen')}">
                                             <h:outputLabel value="Buchung Erstellen"/>
+                                        </div>
+                                    </h:commandLink>
+                                    <h:commandLink action="#{navigationBean.setPage('viewallbuchungen')}">
+                                        <div class="navigationPanel #{navigationBean.isPageUsed('viewallbuchungen')}">
+                                            <h:outputLabel value="Buchungen"/>
                                         </div>
                                     </h:commandLink>
                                 </h:form>

@@ -25,4 +25,5 @@ public interface IDB {
     public Benutzer getBenutzer(int id);
     public Buchung getBuchung(int id);
     public List<Kunden> getKunden();
+    public ArrayList<Buchung> getBuchungen();
 }

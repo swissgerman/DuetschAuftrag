@@ -1,0 +1,34 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/template/layout.xhtml">
+
+
+	<ui:define name="pageTitle">
+		<h:outputLabel value="Test"/>
+	</ui:define>
+	<ui:define name="content">
+            <h:dataTable value="#{jPAHibernateDB.getBuchungen()}" var="b"
+                styleClass="employeeTable"
+                headerClass="employeeTableHeader"
+                rowClasses="employeeTableOddRow,employeeTableEvenRow">
+                <h:column>    				
+                   <f:facet name="header">Kunde</f:facet>    				
+                   #{b.kunden.name}
+                </h:column>
+                <h:column>
+                   <f:facet name="header">Ankunft</f:facet>
+                   #{b.ankunft}
+                </h:column>
+                <h:column>
+                   <f:facet name="header">Abreise</f:facet>
+                   #{b.abreise}
+                </h:column>
+                <h:column>
+                   <f:facet name="header">Editieren</f:facet>
+                   <h:commandButton action="#{navigationBean.setEditBuchung(b)}" image="images/csv.png"/>
+                </h:column>
+             </h:dataTable>
+	</ui:define>
+
+</ui:composition>
