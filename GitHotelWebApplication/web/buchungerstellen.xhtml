@@ -1,17 +1,40 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui"  
 	template="/template/layout.xhtml">
 
 
 	<ui:define name="pageTitle">
-		<h:outputLabel value="Test"/>
+		<h:outputLabel value="Buchung erstellen"/>
 	</ui:define>
+    
 	<ui:define name="content">
-            <h:selectOneMenu value="Kunde wählen">
-                    <f:selectItems value="#{jPAHibernateDB.getKunden()}" var="o" itemValue="#{o}" itemLabel="#{o.name} #{o.vorname}"/>
-            </h:selectOneMenu>    
-            
+            <h:form>
+                <p:outputLabel  value="Kunde wählen" />
+                <br/>
+                <h:selectOneMenu value="#{navigationBean.kunde}">
+                        <f:selectItems value="#{jPAHibernateDB.getKunden()}" var="o" itemValue="#{o.persId}" itemLabel="#{o.name} #{o.vorname}"/>
+                </h:selectOneMenu>    
+                <br/>
+                <p:outputLabel for="fromDate" value="Ankuft" />
+                <br/>
+                <p:calendar id="fromDate" value="#{navigationBean.editBuchung.ankunft}" />
+                <br/>
+                <p:outputLabel for="toDate" value="Abreise" />
+                <br/>
+                <p:calendar id="toDate" value="#{navigationBean.editBuchung.abreise}" />
+                <br/>
+                <h:outputText value="Abgeschlossen " />
+                <br/>
+                <p:selectBooleanButton value="#{navigationBean.editBuchung.abgeschlossen}" onLabel="Ja" offLabel="Nein"  />
+                <br/>
+                <h:commandButton value="Speichern" type="submit" action="#{navigationBean.save()}" >
+                    
+                </h:commandButton>
+                <h:messages/>
+                <br/>
+            </h:form>
 	</ui:define>
 
 </ui:composition>

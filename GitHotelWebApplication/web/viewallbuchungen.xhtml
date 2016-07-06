@@ -8,13 +8,14 @@
 		<h:outputLabel value="Test"/>
 	</ui:define>
 	<ui:define name="content">
+            <h:form>
             <h:dataTable value="#{jPAHibernateDB.getBuchungen()}" var="b"
                 styleClass="employeeTable"
                 headerClass="employeeTableHeader"
                 rowClasses="employeeTableOddRow,employeeTableEvenRow">
                 <h:column>    				
                    <f:facet name="header">Kunde</f:facet>    				
-                   #{b.kunden.name}
+                   #{b.kunden.name} #{b.kunden.vorname} 
                 </h:column>
                 <h:column>
                    <f:facet name="header">Ankunft</f:facet>
@@ -25,10 +26,15 @@
                    #{b.abreise}
                 </h:column>
                 <h:column>
+                   <f:facet name="header">Abgeschlossen</f:facet>
+                   #{b.abgeschlossen}
+                </h:column>
+                <h:column>
                    <f:facet name="header">Editieren</f:facet>
                    <h:commandButton action="#{navigationBean.setEditBuchung(b)}" image="images/csv.png"/>
                 </h:column>
              </h:dataTable>
+            </h:form>
 	</ui:define>
 
 </ui:composition>

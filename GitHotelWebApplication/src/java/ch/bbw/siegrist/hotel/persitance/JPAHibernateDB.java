@@ -60,7 +60,7 @@ public class JPAHibernateDB implements IDB{
     @Override
     public boolean createBuchung(Buchung buchung) {
         Transaction t = session.beginTransaction();
-        session.save(buchung);
+        session.saveOrUpdate(buchung);
         t.commit();
         return true;
     }
