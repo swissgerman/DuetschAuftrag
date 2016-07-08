@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
@@ -25,3 +26,32 @@
         </set>
     </class>
 </hibernate-mapping>
+=======
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05.07.2016 18:51:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ch.bbw.siegrist.hotel.persitance.entity.Benutzer" table="benutzer" catalog="hoteldb" optimistic-lock="version">
+        <id name="userId" type="java.lang.Integer">
+            <column name="UserID" />
+            <generator class="identity" />
+        </id>
+        <property name="benutzer" type="string">
+            <column name="Benutzer" length="20" not-null="true" />
+        </property>
+        <property name="passwort" type="string">
+            <column name="Passwort" length="20" not-null="true" />
+        </property>
+        <property name="ganzerName" type="string">
+            <column name="GanzerName" length="50" not-null="true" />
+        </property>
+        <set name="positions" table="position" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" />
+            </key>
+            <one-to-many class="ch.bbw.siegrist.hotel.persitance.entity.Position" />
+        </set>
+    </class>
+</hibernate-mapping>
+>>>>>>> f5e194ae612815c0ac9626e5ec8d1446787cf172

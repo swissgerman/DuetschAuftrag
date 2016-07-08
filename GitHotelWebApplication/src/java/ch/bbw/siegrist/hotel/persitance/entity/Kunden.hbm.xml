@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
@@ -37,3 +38,44 @@
         </set>
     </class>
 </hibernate-mapping>
+=======
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05.07.2016 18:51:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ch.bbw.siegrist.hotel.persitance.entity.Kunden" table="kunden" catalog="hoteldb" optimistic-lock="version">
+        <id name="persId" type="java.lang.Integer">
+            <column name="PersID" />
+            <generator class="identity" />
+        </id>
+        <property name="vorname" type="string">
+            <column name="Vorname" length="30" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="Name" length="30" not-null="true" />
+        </property>
+        <property name="strasse" type="string">
+            <column name="Strasse" length="30" />
+        </property>
+        <property name="ort" type="string">
+            <column name="Ort" length="30" />
+        </property>
+        <property name="anrede" type="string">
+            <column name="Anrede" length="10" />
+        </property>
+        <property name="privattelefon" type="string">
+            <column name="Privattelefon" length="20" />
+        </property>
+        <property name="eingabedatum" type="timestamp">
+            <column name="Eingabedatum" length="19" />
+        </property>
+        <set name="buchungs" table="buchung" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PersID" />
+            </key>
+            <one-to-many class="ch.bbw.siegrist.hotel.persitance.entity.Buchung" />
+        </set>
+    </class>
+</hibernate-mapping>
+>>>>>>> f5e194ae612815c0ac9626e5ec8d1446787cf172

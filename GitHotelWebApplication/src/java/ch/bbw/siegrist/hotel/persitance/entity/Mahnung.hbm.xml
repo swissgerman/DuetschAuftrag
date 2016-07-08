@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
@@ -16,3 +17,23 @@
         </property>
     </class>
 </hibernate-mapping>
+=======
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05.07.2016 18:51:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ch.bbw.siegrist.hotel.persitance.entity.Mahnung" table="mahnung" catalog="hoteldb" optimistic-lock="version">
+        <id name="mahnungId" type="int">
+            <column name="MahnungID" />
+            <generator class="assigned" />
+        </id>
+        <property name="mahndatum" type="timestamp">
+            <column name="Mahndatum" length="19" not-null="true" />
+        </property>
+        <property name="rechnungIdfs" type="int">
+            <column name="RechnungIDFS" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
+>>>>>>> f5e194ae612815c0ac9626e5ec8d1446787cf172

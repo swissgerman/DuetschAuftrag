@@ -1,5 +1,5 @@
 package ch.bbw.siegrist.hotel.persitance.entity;
-// Generated 23.05.2016 16:48:12 by Hibernate Tools 4.3.1
+// Generated 05.07.2016 18:51:09 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -27,15 +27,6 @@ public class Buchung  implements java.io.Serializable {
         this.buchungId = buchungId;
         this.abgeschlossen = abgeschlossen;
     }
-    
-    public Buchung( Kunden kunden, Date ankunft, Date abreise, boolean abgeschlossen, Set positions) {
-       this.kunden = kunden;
-       this.ankunft = ankunft;
-       this.abreise = abreise;
-       this.abgeschlossen = abgeschlossen;
-       this.positions = positions;
-    }
-    
     public Buchung(int buchungId, Kunden kunden, Date ankunft, Date abreise, boolean abgeschlossen, Set positions) {
        this.buchungId = buchungId;
        this.kunden = kunden;

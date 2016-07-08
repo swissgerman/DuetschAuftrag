@@ -30,7 +30,8 @@ CREATE TABLE IF NOT EXISTS `benutzer` (
 `UserID` int(11) NOT NULL,
   `Benutzer` varchar(20) NOT NULL DEFAULT '',
   `Passwort` varchar(20) NOT NULL DEFAULT '',
-  `GanzerName` varchar(50) NOT NULL DEFAULT ''
+  `GanzerName` varchar(50) NOT NULL DEFAULT '',
+  `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
@@ -38,15 +39,15 @@ CREATE TABLE IF NOT EXISTS `benutzer` (
 --
 
 INSERT INTO `benutzer` (`UserID`, `Benutzer`, `Passwort`, `GanzerName`) VALUES
-(1, 'Admin', '777', 'Administrator'),
-(2, 'Heinz', '2000', 'Heinz Mueller'),
-(3, 'Esther', '0000', 'Esther Mueller'),
-(7, 'Peter', '0000', 'Peter Sauber'),
-(8, 'Max', '0000', 'Max Niederer'),
-(11, 'Benjamin', '0000', 'Benjamin Angst'),
-(12, 'Victoria', '0000', 'Victoria Reimann'),
-(13, 'Matthias', 'mape', 'Matthias Gubler'),
-(14, 'Ana', 'amor', 'Ana Burkhardt');
+(1, 'Admin', '777', 'Administrator', 1),
+(2, 'Heinz', '2000', 'Heinz Mueller', 0),
+(3, 'Esther', '0000', 'Esther Mueller', 0),
+(7, 'Peter', '0000', 'Peter Sauber', 0),
+(8, 'Max', '0000', 'Max Niederer', 0),
+(11, 'Benjamin', '0000', 'Benjamin Angst', 0),
+(12, 'Victoria', '0000', 'Victoria Reimann', 0),
+(13, 'Matthias', 'mape', 'Matthias Gubler', 0),
+(14, 'Ana', 'amor', 'Ana Burkhardt', 0);
 
 -- --------------------------------------------------------
 

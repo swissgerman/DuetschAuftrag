@@ -5,24 +5,26 @@
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>1300</x>
-      <y>360</y>
+      <y>290</y>
       <w>210</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>benutzer
 --
-UserID: int(11)
-Benutzer: varchar(20)
-Passwort: varchar(20)
-GanzerName: varchar(50)
-</panel_attributes>
+ 
+ 
+ 
+
+ 
+admin: boolean
+fg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>580</x>
-      <y>320</y>
+      <y>250</y>
       <w>210</w>
       <h>170</h>
     </coordinates>
@@ -39,7 +41,7 @@ Abreise: datetime
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>920</x>
-      <y>490</y>
+      <y>420</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -54,7 +56,7 @@ fg=red
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>1300</x>
-      <y>140</y>
+      <y>70</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -68,7 +70,7 @@ Beschriebung: varchar(70)</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>940</x>
-      <y>260</y>
+      <y>190</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -88,7 +90,7 @@ Datum: datetime </panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>760</x>
-      <y>340</y>
+      <y>270</y>
       <w>180</w>
       <h>200</h>
     </coordinates>
@@ -101,9 +103,9 @@ m2=1</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>750</x>
-      <y>280</y>
-      <w>210</w>
-      <h>60</h>
+      <y>210</y>
+      <w>200</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -115,7 +117,7 @@ m2=mc
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>1120</x>
-      <y>140</y>
+      <y>70</y>
       <w>200</w>
       <h>200</h>
     </coordinates>
@@ -129,7 +131,7 @@ m2=1
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>1120</x>
-      <y>310</y>
+      <y>240</y>
       <w>200</w>
       <h>100</h>
     </coordinates>
@@ -143,7 +145,7 @@ m2=1
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>920</x>
-      <y>490</y>
+      <y>420</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -165,7 +167,7 @@ Eingabedatum: datetime
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>1300</x>
-      <y>140</y>
+      <y>70</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -181,7 +183,7 @@ fg=red</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>580</x>
-      <y>320</y>
+      <y>250</y>
       <w>210</w>
       <h>170</h>
     </coordinates>
@@ -202,7 +204,7 @@ fg=red</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>290</x>
-      <y>390</y>
+      <y>320</y>
       <w>210</w>
       <h>170</h>
     </coordinates>
@@ -222,7 +224,7 @@ fg=red
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>470</x>
-      <y>320</y>
+      <y>250</y>
       <w>130</w>
       <h>140</h>
     </coordinates>
@@ -236,7 +238,7 @@ fg=red</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>580</x>
-      <y>540</y>
+      <y>470</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -251,7 +253,7 @@ fg=red</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>580</x>
-      <y>540</y>
+      <y>470</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -267,7 +269,7 @@ fg=black</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>0</x>
-      <y>390</y>
+      <y>320</y>
       <w>210</w>
       <h>170</h>
     </coordinates>
@@ -285,14 +287,31 @@ fg=red
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>180</x>
-      <y>390</y>
-      <w>130</w>
-      <h>70</h>
+      <y>320</y>
+      <w>120</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=mc
 fg=red</panel_attributes>
     <additional_attributes>110;30;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1300</x>
+      <y>290</y>
+      <w>210</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>benutzer
+--
+UserID: int(11)
+Benutzer: varchar(20)
+Passwort: varchar(20)
+GanzerName: varchar(50)
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

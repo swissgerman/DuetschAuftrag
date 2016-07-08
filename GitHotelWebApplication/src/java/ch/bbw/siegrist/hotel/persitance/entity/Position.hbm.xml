@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
@@ -28,3 +29,35 @@
         </property>
     </class>
 </hibernate-mapping>
+=======
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05.07.2016 18:51:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ch.bbw.siegrist.hotel.persitance.entity.Position" table="position" catalog="hoteldb" optimistic-lock="version">
+        <id name="positionId" type="java.lang.Integer">
+            <column name="PositionID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="benutzer" class="ch.bbw.siegrist.hotel.persitance.entity.Benutzer" fetch="select">
+            <column name="UserID" />
+        </many-to-one>
+        <many-to-one name="buchung" class="ch.bbw.siegrist.hotel.persitance.entity.Buchung" fetch="select">
+            <column name="BuchungID" />
+        </many-to-one>
+        <many-to-one name="leistung" class="ch.bbw.siegrist.hotel.persitance.entity.Leistung" fetch="select">
+            <column name="LeistungID" />
+        </many-to-one>
+        <property name="anzahl" type="java.lang.Integer">
+            <column name="Anzahl" />
+        </property>
+        <property name="preis" type="big_decimal">
+            <column name="Preis" precision="9" />
+        </property>
+        <property name="datum" type="timestamp">
+            <column name="Datum" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
+>>>>>>> f5e194ae612815c0ac9626e5ec8d1446787cf172

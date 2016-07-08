@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
@@ -28,3 +29,35 @@
         </set>
     </class>
 </hibernate-mapping>
+=======
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05.07.2016 18:51:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ch.bbw.siegrist.hotel.persitance.entity.Buchung" table="buchung" catalog="hoteldb" optimistic-lock="version">
+        <id name="buchungId" type="int">
+            <column name="BuchungID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="kunden" class="ch.bbw.siegrist.hotel.persitance.entity.Kunden" fetch="select">
+            <column name="PersID" />
+        </many-to-one>
+        <property name="ankunft" type="timestamp">
+            <column name="Ankunft" length="19" />
+        </property>
+        <property name="abreise" type="timestamp">
+            <column name="Abreise" length="19" />
+        </property>
+        <property name="abgeschlossen" type="boolean">
+            <column name="Abgeschlossen" not-null="true" />
+        </property>
+        <set name="positions" table="position" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="BuchungID" />
+            </key>
+            <one-to-many class="ch.bbw.siegrist.hotel.persitance.entity.Position" />
+        </set>
+    </class>
+</hibernate-mapping>
+>>>>>>> f5e194ae612815c0ac9626e5ec8d1446787cf172
